@@ -22,6 +22,18 @@ class ChatListScreen extends StatelessWidget {
         title: Text('Chat List'),
       ),
       body: ChatList(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          //　フローティングボタンが押されたときのアクションを追加
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => ChatScreen(),
+            ),
+          );
+        },
+        child: Icon(Icons.add),
+      ),
     );
   }
 }
